@@ -1,8 +1,7 @@
 from pathlib import Path
 import argparse
 
-TEMPLATE = """
-[project]
+TEMPLATE = """[project]
 name = "{name}"
 version = "0.1.0"
 
@@ -14,10 +13,11 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 """
 
-MAIN_FUNCTION = """
-def main():
-    print("hello from the {name} tool.")
+MAIN_FUNCTION = """def main():
+    print("Hello from the {name} tool.")
 """
+
+GITIGNORE_TEXT = "{name}.egg-info"
 
 
 def create_tool(name):
@@ -31,6 +31,7 @@ def create_tool(name):
     (package / "__init__.py").write_text("")
     (package / "cli.py").write_text(MAIN_FUNCTION.format(name=name))
     (root / "pyproject.toml").write_text(TEMPLATE.format(name=name))
+    (root / ".gitignore").write_text(GITIGNORE_TEXT.format(name=name))
 
 
 def main():

@@ -1,0 +1,10 @@
+[project]
+name = "cliptool"
+version = "0.1.0"
+
+[project.scripts]
+cliptool = "cliptool.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
