@@ -2,6 +2,10 @@
 name = "pygrep"
 version = "0.1.0"
 
+dependencies = [
+    "rich"
+]
+
 [project.scripts]
 pygrep = "pygrep.cli:main"
 
