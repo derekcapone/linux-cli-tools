@@ -19,6 +19,7 @@ MAIN_FUNCTION = """def main():
 
 GITIGNORE_TEXT = """{name}.egg-info
 {name}/__pycache__
+build/
 """
 
 
