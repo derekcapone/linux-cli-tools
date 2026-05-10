@@ -17,7 +17,9 @@ MAIN_FUNCTION = """def main():
     print("Hello from the {name} tool.")
 """
 
-GITIGNORE_TEXT = "{name}.egg-info"
+GITIGNORE_TEXT = """{name}.egg-info
+{name}/__pycache__
+"""
 
 
 def create_tool(name):

@@ -1,9 +1,9 @@
 [project]
-name = "cliptool"
+name = "pygrep"
 version = "0.1.0"
 
 [project.scripts]
-cliptool = "cliptool.cli:main"
+pygrep = "pygrep.cli:main"
 
 [build-system]
 requires = ["setuptools"]
