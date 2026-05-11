@@ -5,6 +5,10 @@ TEMPLATE = """[project]
 name = "{name}"
 version = "0.1.0"
 
+dependencies = [
+    "typer"
+]
+
 [project.scripts]
 {name} = "{name}.cli:main"
 
@@ -13,8 +17,19 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 """
 
-MAIN_FUNCTION = """def main():
+MAIN_FUNCTION = """import typer
+
+def app():
     print("Hello from the {name} tool.")
+
+
+def main():
+    typer.run(app)
+
+
+if __name__ == "__main__":
+    main()
+
 """
 
 GITIGNORE_TEXT = """{name}.egg-info

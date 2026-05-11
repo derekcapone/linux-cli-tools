@@ -3,7 +3,8 @@ name = "pygrep"
 version = "0.1.0"
 
 dependencies = [
-    "rich"
+    "rich",
+    "typer"
 ]
 
 [project.scripts]
